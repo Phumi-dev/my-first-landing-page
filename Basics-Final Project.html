@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Coraline</title>
+    <style>
+      h1 {
+        text-align: center;
+        font-size: xx-large;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      h2 {
+        text-align: center;
+        border: 1px solid rgb(14, 53, 79);
+        padding: 15px;
+        font-size: 16px;
+        border-radius: 10px;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      h5 {
+        text-align: center;
+        font-weight: none;
+      }
+      h6 {
+        text-align: center;
+        font-family: "Courier New", Courier, monospace;
+      }
+
+      p {
+        font-family: Arial, Helvetica, sans-serif;
+        line-height: 2.5;
+        font-size: 14px;
+        margin: 20px 0 10px;
+      }
+      hr {
+        border-color: rgb(14, 53, 79);
+        border: 50;
+        height: 1px;
+      }
+      img {
+        display: block;
+        margin: 0 auto;
+        max-width: 100%;
+        border-radius: 30px;
+      }
+      button {
+        display: block;
+        margin: 30px auto;
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: rgb(14, 53, 79);
+        color: white;
+        font-size: 18px;
+        padding: 15px 40px;
+        border: none;
+        border-radius: 10px;
+        box-shadow: 3px 3px 10px rgba(0, 0, 0, 3);
+        transition: all 200ms ease-in-out;
+      }
+      button:hover {
+        opacity: 0.9;
+        cursor: pointer;
+      }
+      .page {
+        max-width: 500px;
+        margin: 0 auto;
+        padding: 30px 60px;
+        background: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
+        border-radius: 15px;
+      }
+      .find-out {
+        display: block;
+        margin-top: 10px;
+        text-align: center;
+        text-decoration: none;
+        color: rgb(14, 53, 79);
+        font-size: 15px;
+      }
+      .find-out:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <h1>
+        <hr />
+        Coraline
+        <hr />
+      </h1>
+      <h5>
+        <em>
+          "The best animated halloween movie to ever exist!" - Phomello
+          Maphobole
+        </em>
+      </h5>
+      <br />
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/104/376/original/coraline2.jpeg?1700393672"
+        alt="Coraline Coverpage"
+      />
+      <br />
+      <h2>About the movie</h2>
+
+      <p>
+        Coraline is a 2009 American stop motion animated dark fantasy horror
+        film written and directed by Henry Selick, based on Neil Gaiman's
+        novella of the same name. Produced by LAIKA, as the studio's first
+        feature film, it features the voice talents of Dakota Fanning, Teri
+        Hatcher, Jennifer Saunders, Dawn French, Keith David, John Hodgman,
+        Robert Bailey Jr., and Ian McShane. The musical score was composed by
+        Bruno Coulais. The film tells the story of its eponymous character
+        discovering an idealized alternate universe behind a secret door in her
+        new home, unaware that it contains something dark and sinister. Her
+        friends, a boy named Wybie and a stray black cat, help her set things
+        right and become closer to her parents.
+      </p>
+
+      <hr />
+      <br />
+      <a
+        href="https://en.wikipedia.org/wiki/Coraline_(film)"
+        target="_blank"
+        class="find-out"
+      >
+        <strong> Click here to find out more </strong>
+      </a>
+      <button class="watch-button">Book now to watch the movie 🍿</button>
+      <h6>
+        This page was built by
+        <span style="color: rgb(14, 53, 79)">Phomello Maphobole</span>
+      </h6>
+    </div>
+  </body>
+  <script>
+    function watch() {
+      let name = prompt("What is your name?");
+      let lastName = prompt("What is your last name?");
+      let city = prompt("What city are you from?");
+      let email = prompt("What is your email address?");
+
+      if (city === "Pretoria") {
+        alert(
+          "Thank you " +
+            name +
+            " " +
+            lastName +
+            "! Your ticket has been processed, you will recieve an email with our payment details!"
+        );
+      } else {
+        alert(
+          "Thank you " +
+            name +
+            ", " +
+            "Please go to your nearest movie cinema to confirm your ticket"
+        );
+      }
+    }
+
+    let watchButton = document.querySelector(".watch-button");
+    watchButton.addEventListener("click", watch);
+  </script>
+</html>
